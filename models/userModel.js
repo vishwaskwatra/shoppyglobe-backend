@@ -6,13 +6,12 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    trim: true,
   },
   email: {
     type: String,
-    required: false,
-    unique: true,
-    trim: true,
+    required: true,
+    unique: true, 
+    lowercase: true, 
   },
   password: {
     type: String,
